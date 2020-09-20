@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardHeader, Avatar,IconButton, CardContent, Typography, CardActions, Button} from "@material-ui/core";
+import {Card, CardHeader, Avatar,IconButton, CardContent, Typography, CardActions, Button, CardMedia} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 import ShareIcon from "@material-ui/icons/Share";
 
@@ -37,20 +37,11 @@ function CardBody(props){
                     title={title}
                     subheader={subtitle}
                 />
+                <CardMedia style={{height: "200px"}}
+                image={imgsrc} />
             <CardContent>
                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    Word of the Day
-                </Typography>
-                <Typography variant="h5" component="h2">
-                    be{bull}nev{bull}o{bull}lent
-                </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                    adjective
-                </Typography>
-                <Typography variant="body2" component="p">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
+                    {description}
                 </Typography>
             </CardContent>
             <CardActions>
