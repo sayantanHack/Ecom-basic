@@ -45,7 +45,8 @@ function CardBody(props){
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Buy Now</Button>
+                <Button size="small">Add to Cart</Button>
             </CardActions>
             </Card>
         </div>
