@@ -20,34 +20,33 @@ const useStyles = makeStyles({
 function CardBody(props){
 
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
-    const {avatarSrc, title, subtitle, description, imgsrc} = props;
+    const {avatar, title, subtitle, description, img} = props;
     return(
         <div>
             <Card>
                 <CardHeader
                     avatar={
-                    <Avatar src={avatarSrc} />
+                        <Avatar src={avatar} />
                     }
                     action={
-                    <IconButton aria-label="settings">
-                        <ShareIcon />
-                    </IconButton>
+                        <IconButton aria-label="settings">
+                            <ShareIcon />
+                        </IconButton>
                     }
                     title={title}
                     subheader={subtitle}
                 />
-                <CardMedia style={{height: "200px"}}
-                image={imgsrc} />
-            <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    {description}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Buy Now</Button>
-                <Button size="small">Add to Cart</Button>
-            </CardActions>
+                <CardMedia style={{height: "200px"}} image={img} />
+
+                <CardContent>
+                    <Typography className={classes.title} color="textSecondary" gutterBottom>
+                        {description}
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <Button size="small">Buy Now</Button>
+                    <Button size="small">Add to Cart</Button>
+                </CardActions>
             </Card>
         </div>
     );

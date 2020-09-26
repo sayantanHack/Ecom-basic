@@ -12,11 +12,11 @@ function App() {
         
         <Grid item container>
            
-           <Grid item xs={0} sm={2} />
-           <Grid item xs={12} sm={8}>
+          <Grid item xs={0} sm={2} />      {/*Initial spaces for margin area */}
+           <Grid item xs={12} sm={8}>       {/* The main content sectionextra small in 12 small is in 8 margin as 8+4=12 */}
               <Content />
            </Grid> 
-           <Grid item xs={0} sm={2} />
+           <Grid item xs={0} sm={2} />      {/*Initial spaces for margin area */}
         </Grid>
 
       </Grid>
